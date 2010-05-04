@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[[ $1 == "film" ]] && source="/dati/Video/FILM/" || source=$1
+dest=$2
+rsync -vaz --delete --ignore-errors --progress -pogt --modify-window=1 $source $dest

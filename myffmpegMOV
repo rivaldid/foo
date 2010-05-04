@@ -1,0 +1,1 @@
+ffmpeg -i $1.mov -ar 44100 -ac 2 $1.avi

@@ -1,0 +1,1 @@
+[[ -s $1 ]] && gpsbabel -i gpx -f $1 -o kml -F $1.kml || echo "e dammi anche un file gpx la prossima volta"

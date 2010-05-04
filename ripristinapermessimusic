@@ -1,0 +1,2 @@
+sudo chmod 0755 -R /dati/Music
+sudo chown -R mpd /dati/Music

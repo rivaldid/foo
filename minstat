@@ -1,0 +1,5 @@
+#!/bin/bash
+v1=$((`cut -f1 -d' ' /proc/uptime | cut -f1 -d.` / 60))
+v2=$(echo "scale=2;$(cat /proc/net/dev | grep eth0 | tr ":" " " | awk '{ print $2 }')/1024/1024" |bc)
+v3=$(echo "scale=2;$(cat /proc/net/dev | grep eth0 | tr ":" " " | awk '{ print $10 }')/1024/1024" |bc)
+echo uptime: $v1 mins, downloads: $v2 MB, uploads: $v3 MB.

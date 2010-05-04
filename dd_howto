@@ -1,0 +1,1 @@
+dd if=/dev/vecchiaPartizione of=/dev/nuovoHDnuovaPartiziene bs=4k

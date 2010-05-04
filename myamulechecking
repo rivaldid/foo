@@ -1,0 +1,11 @@
+#!/bin/bash
+#tadah=$(wget -q "http://amule.uw.hu/tarballs/tarballs.xml" -O- | grep -v branch | awk -F "'" '/revision/ {field = $2}; END{print field }')
+#tadah=$(wget -q "http://amule.uw.hu/tarballs/tarballs.xml" -O- | awk -F "'" '/youngest/ {field = $4}; END{print field }')
+#tadah=$(wget -q "http://amule.sourceforge.net/tarballs/tarballs.xml" -O- | awk -F "'" '/youngest/ {field = $4}; END{print field }')
+#echo [LOCAL=$(pacman -Q amule-devel | awk {'print $2'})] [REPO=$(pacman -Sl deelab | grep amule-devel | awk {'print $3'})] [SOURCE=$tadah]
+
+
+foo=`wget -q "http://amule.sourceforge.net/tarballs/tarballs.xml" -O- | awk -F "'" '/youngest/ {field = $4}; END{print field }'`
+bar=`pacman -Q amule-devel | awk {'print $2'} | sed -e 's:-1::g'`
+echo "ultimo archivio sorgenti:" $foo
+echo "ultimo pacchetto installato:" $bar

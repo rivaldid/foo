@@ -1,0 +1,3 @@
+killall xcompmgr
+tremulous connect feeder.homeunix.org:30444
+xcompmgr&
