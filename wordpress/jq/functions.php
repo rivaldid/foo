@@ -43,56 +43,56 @@ $shortname = "jq";
 
 $options = array (
 
-	array(	"name" => "Here you find various options to change the appearance of the theme.",
-			"type" => "title"),
-			
-	array(	"type" => "open"),
+    array(  "name" => "Here you find various options to change the appearance of the theme.",
+            "type" => "title"),
 
-        array(	"name" => "Style Schemes",
-			"desc" => "Choose a style scheme.",
-			"id" => $shortname."_style_scheme",
-			"std" => "Default",
-			"type" => "select",
-			"options" => array("Default", "Serif", "Dark", "Green")),
-	
-	array(	"name" => "Background colour",
-			"desc" => "Enter a value for the background colour (without CSS mark-up, like <em>#ff0000</em>).",
-			"id" => $shortname."_bg_color",
-			"std" => "",
-			"type" => "text"),
+    array(  "type" => "open"),
 
-	array(	"name" => "Page colour",
-			"desc" => "Enter a value for the page colour (without CSS mark-up, like <em>#ff0000</em>).",
-			"id" => $shortname."_page_color",
-			"std" => "",
-			"type" => "text"),
+        array(  "name" => "Style Schemes",
+            "desc" => "Choose a style scheme.",
+            "id" => $shortname."_style_scheme",
+            "std" => "Default",
+            "type" => "select",
+            "options" => array("Default", "Serif", "Dark", "Green")),
 
-	array(  "name" => "Display sidebar on the left?",
-			"desc" => "Check this box if you would like to display the sidebar on the left of the page.",
+    array(  "name" => "Background colour",
+            "desc" => "Enter a value for the background colour (without CSS mark-up, like <em>#ff0000</em>).",
+            "id" => $shortname."_bg_color",
+            "std" => "",
+            "type" => "text"),
+
+    array(  "name" => "Page colour",
+            "desc" => "Enter a value for the page colour (without CSS mark-up, like <em>#ff0000</em>).",
+            "id" => $shortname."_page_color",
+            "std" => "",
+            "type" => "text"),
+
+    array(  "name" => "Display sidebar on the left?",
+            "desc" => "Check this box if you would like to display the sidebar on the left of the page.",
             "id" => $shortname."_sidebar_left",
             "type" => "checkbox",
             "std" => "false"),
 
-	array(  "name" => "Display categories in navigation?",
-			"desc" => "Check this box if you would like to display categories instead of pages in the navigation.",
+    array(  "name" => "Display categories in navigation?",
+            "desc" => "Check this box if you would like to display categories instead of pages in the navigation.",
             "id" => $shortname."_nav_display",
             "type" => "checkbox",
             "std" => "false"),
 
-	array(  "name" => "Show the excerpt on index pages?",
-			"desc" => "Check this box if you would like to show the excerpt instead of the entire post on index pages.",
+    array(  "name" => "Show the excerpt on index pages?",
+            "desc" => "Check this box if you would like to show the excerpt instead of the entire post on index pages.",
             "id" => $shortname."_post_display",
             "type" => "checkbox",
             "std" => "false"),
 
-	array(  "name" => "Hide admin email in navigation?",
-			"desc" => "Check this box if you would like to hide the admin email address.",
+    array(  "name" => "Hide admin email in navigation?",
+            "desc" => "Check this box if you would like to hide the admin email address.",
             "id" => $shortname."_mail_display",
             "type" => "checkbox",
             "std" => "false"),
-	
-	array(	"type" => "close")
-	
+
+    array(  "type" => "close")
+
 );
 
 function mytheme_add_admin() {
@@ -100,7 +100,7 @@ function mytheme_add_admin() {
     global $themename, $shortname, $options;
 
     if ( $_GET['page'] == basename(__FILE__) ) {
-    
+
         if ( 'save' == $_REQUEST['action'] ) {
 
                 foreach ($options as $value) {
@@ -133,7 +133,7 @@ function mytheme_admin() {
 
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p>'.$themename.' settings saved.</p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p>'.$themename.' settings reset.</p></div>';
-    
+
 ?>
 <div class="wrap">
 <h2><?php echo $themename; ?> settings</h2>
@@ -142,50 +142,50 @@ function mytheme_admin() {
 
 
 
-<?php foreach ($options as $value) { 
-    
-	switch ( $value['type'] ) {
-	
-		case "open":
-		?>
-        <table width="100%" border="0" style="color:#333;">		    
-        
-		<?php break;
-		
-		case "close":
-		?>
-		
+<?php foreach ($options as $value) {
+
+    switch ( $value['type'] ) {
+
+        case "open":
+        ?>
+        <table width="100%" border="0" style="color:#333;">
+
+        <?php break;
+
+        case "close":
+        ?>
+
         </table><br />
-        
-        
-		<?php break;
-		
-		case "title":
-		?>
-		<table width="100%" border="0"><tr>
-        	<td colspan="2"><h3 style="font:normal 14px Verdana,sans-serif;color:#21759b;"><?php echo $value['name']; ?></h3></td>
+
+
+        <?php break;
+
+        case "title":
+        ?>
+        <table width="100%" border="0"><tr>
+            <td colspan="2"><h3 style="font:normal 14px Verdana,sans-serif;color:#21759b;"><?php echo $value['name']; ?></h3></td>
         </tr>
 
-		<?php break;
-		
-		case 'select':
-		?>
+        <?php break;
+
+        case 'select':
+        ?>
         <tr>
             <td width="25%" rowspan="2" valign="middle"><?php echo $value['name']; ?></td>
-	            <td width="75%"><select style="width:400px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-	                <?php foreach ($value['options'] as $option) { ?>
-	                <option <?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
-	                <?php } ?>
-	            </select></td></tr>
+                <td width="75%"><select style="width:400px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
+                    <?php foreach ($value['options'] as $option) { ?>
+                    <option <?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
+                    <?php } ?>
+                </select></td></tr>
                         <tr>
             <td><small><?php echo $value['desc']; ?></small></td>
         </tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ccc;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
-        
-		<?php break;
 
-		case 'text':
-		?>
-        
+        <?php break;
+
+        case 'text':
+        ?>
+
         <tr>
             <td width="25%" rowspan="2" valign="middle"><?php echo $value['name']; ?></td>
             <td width="75%"><input style="width:400px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" /></td>
@@ -197,28 +197,28 @@ function mytheme_admin() {
 
 <?php
         break;
-            
-		case "checkbox":
-		?>
+
+        case "checkbox":
+        ?>
             <tr>
             <td width="25%" rowspan="2" valign="middle"><?php echo $value['name']; ?></td>
                 <td width="75%"><?php if(get_settings($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = ""; } ?>
                         <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
                         </td>
             </tr>
-                        
+
             <tr>
                 <td><small><?php echo $value['desc']; ?></small></td>
            </tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ccc;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
-            
-        <?php 		break;	
- 
-} 
+
+        <?php       break;
+
+}
 }
 ?>
 <!--</table>-->
 <p class="submit" style="margin:0;padding:0;">
-<input name="save" type="submit" value="Save changes" />    
+<input name="save" type="submit" value="Save changes" />
 <input type="hidden" name="action" value="save" />
 </p>
 </form>
