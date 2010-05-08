@@ -15,19 +15,19 @@ $("ul.sf-menu").supersubs().superfish(
  $("#toggle-all").toggle(
                     function(){
                          $(".excerpt").hide('slow');
-			 $("#toggle").attr("class","show-all");
+             $("#toggle").attr("class","show-all");
                     }, function() {
                          $(".excerpt").show('slow');
-			 $("#toggle").attr("class","hide-all");
+             $("#toggle").attr("class","hide-all");
                     });
 
 $(".hide-excerpt").click(function (event) {
-	event.preventDefault();
+    event.preventDefault();
       $(this).parents(".excerpt").hide("normal");
     });
 
 $(".view-excerpt").click(function (event) {
-	event.preventDefault();
+    event.preventDefault();
       $(this).parents(".headline").next(".excerpt").toggle("normal");
     });
 

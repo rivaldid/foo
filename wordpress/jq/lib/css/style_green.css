@@ -1,7 +1,7 @@
-/*   
+/*
 Theme Name:jQ
 Theme URI:http://devolux.org/jq
-Description:WordPress theme with two columns, four widget areas and loads of jQuery functions (dropdown navigation, font resizing and more). The theme options include a movable sidebar, custom colours, excerpts on index pages, category or page navigation, different font and colour schemes. 
+Description:WordPress theme with two columns, four widget areas and loads of jQuery functions (dropdown navigation, font resizing and more). The theme options include a movable sidebar, custom colours, excerpts on index pages, category or page navigation, different font and colour schemes.
 Author:Devolux
 Author URI:http://devolux.org/
 Version:2.4
@@ -145,7 +145,7 @@ a#totop {float: right; font: bold 120% Helvetica, sans-serif;}
 .user-url {background: url(../../img/world-edit.png) no-repeat;}
 .user-comment {background: url(../../img/comment-add.png) no-repeat;}
 .info-icon {padding:3px 0 3px 20px; margin:0 0 0 0px; background-position:0px 4px;}
- 
+
 .clear {clear: both;}
 
 code {font: normal 120% Courier, serif;}

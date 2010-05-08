@@ -18,7 +18,7 @@
 </ul>
 </div>
 <div class="widget">
-<h4>Meta</h4>	
+<h4>Meta</h4>
 <ul>
 <?php wp_register(); ?>
 <li><?php wp_loginout(); ?></li>
@@ -27,5 +27,5 @@
 <?php wp_meta(); ?>
 </ul>
 </div>
-<?php endif; // endif widget ?>     
+<?php endif; // endif widget ?>
 </div>
