@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
+<install version="1.5" type="template">
+    <name>Archlinux</name>
+    <creationDate>21 November 2009</creationDate>
+    <author>Adriano Foschi</author>
+    <authorEmail>adriano.src@gmail.com</authorEmail>
+    <authorUrl>http://www.obliquo.net</authorUrl>
+    <copyright></copyright>
+    <license>GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>Archlinux template for Joomla 1.5</description>
+    <files>
+        <filename>css/template.css</filename>
+        <filename>images/logo.png</filename>
+        <filename>index.php</filename>
+        <filename>index.html</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>favicon.ico</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.tpl_beez.ini</language>
+    </languages>
+    <administration>
+        <languages folder="admin">
+            <language tag="en-GB">en-GB.tpl_beez.ini</language>
+        </languages>
+    </administration>
+    <positions>
+        <position>left</position>
+        <position>right</position>
+        <position>top</position>
+        <position>breadcrumb</position>
+        <position>user1</position>
+        <position>user2</position>
+        <position>user3</position>
+        <position>user4</position>
+        <position>debug</position>
+        <position>syndicate</position>
+    </positions>
+    <params>
+    </params>
+</install>
