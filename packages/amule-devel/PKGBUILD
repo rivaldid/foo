@@ -10,12 +10,13 @@ depends=('gd>=2.0.34' 'geoip' 'libupnp>=1.6.6' 'wxgtk>=2.8.0.1')
 makedepends=('crypto++')
 provides=(${_realname}=2.2.6)
 conflicts=(${_realname} ${_realname}-remote ${_realname}-remote-upnp ${_realname}-remote-upnp-svn ${_realname}-upnp)
-source=(http://${_realname}.sourceforge.net/tarballs/aMule-SVN-r${pkgver}.tar.bz2)
+source=("http://${_realname}.sourceforge.net/tarballs/aMule-SVN-r${pkgver}.tar.bz2" "gcc4.5.patch")
 
 build() {
   cd ${srcdir}/aMule-SVN-r${pkgver}
 
-  patch -Np0 -i < ../gcc4.5.patch
+  patch -p0 -N < ../gcc4.5.patch
+  
   ./configure --prefix=/usr \
               --mandir=/usr/share/man \
               --enable-cas \
