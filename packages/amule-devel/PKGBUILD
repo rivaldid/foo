@@ -15,8 +15,7 @@ source=(http://${_realname}.sourceforge.net/tarballs/aMule-SVN-r${pkgver}.tar.bz
 build() {
   cd ${srcdir}/aMule-SVN-r${pkgver}
 
-  patch -p0 -N < gcc4.5.patch
-
+  patch -Np0 -i < ../gcc4.5.patch
   ./configure --prefix=/usr \
               --mandir=/usr/share/man \
               --enable-cas \
