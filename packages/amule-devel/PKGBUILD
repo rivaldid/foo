@@ -6,7 +6,7 @@ pkgdesc="An eMule-like client for the eD2k and Kademlia P2P networks (developmen
 arch=('i686' 'x86_64')
 url="http://www.amule.org"
 license=('GPL')
-depends=('gd>=2.0.35' 'geoip' 'libupnp>=1.6.6' 'wxgtk>=2.8.10.1')
+depends=('wxgtk>=2.8.10.1' 'gd>=2.0.35' 'geoip' 'libupnp')
 makedepends=('crypto++')
 provides=(${_realname}=2.2.6)
 conflicts=(${_realname} ${_realname}-adnza ${_realname}-adnza-svn ${_realname}-base-git \
@@ -14,7 +14,7 @@ conflicts=(${_realname} ${_realname}-adnza ${_realname}-adnza-svn ${_realname}-b
 source=(http://${_realname}.sourceforge.net/tarballs/aMule-SVN-r${pkgver}.tar.bz2)
 
 build() {
-  cd ${srcdir}/aMule-SVN-r${pkgver}
+  cd "${srcdir}/aMule-SVN-r${pkgver}"
 
   ./configure --prefix=/usr \
               --mandir=/usr/share/man \
@@ -32,6 +32,6 @@ build() {
               --enable-geoip \
               --enable-upnp
 
-  make
-  make DESTDIR=${pkgdir} install
+  make || return 1
+  make DESTDIR=${pkgdir} install || return 1
 }
