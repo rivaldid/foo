@@ -1,0 +1,1 @@
+yaourt -Sfyu --aur --devel --tmp /home/dax/pkg/tmp --noconfirm
