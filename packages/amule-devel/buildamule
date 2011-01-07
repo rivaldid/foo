@@ -1,0 +1,21 @@
+#!/bin/bash
+
+mofaccio() {
+    echo "==> Mo sto facendo maestro!"
+    makepkg --skipinteg -ci
+}
+
+foo="$(wget -q "http://amule.sourceforge.net/tarballs/tarballs.xml" -O- | awk -F "'" '/youngest/ {field = $4}; END{print field }')"
+bar="$(pacman -Q amule-devel | awk {'print $2'} | sed -e 's:-1::g')"
+echo "-----------------------------------"
+echo "ultimo archivio sorgenti:" $foo
+echo "ultimo pacchetto installato:" $bar
+echo "-----------------------------------"
+
+
+[[ "$foo" == "$bar" ]] \
+    || mofaccio
+
+[[ "$foo" == "$bar" ]] \
+    && echo "==> Ok, non serve piu'. stat bun!"
+
