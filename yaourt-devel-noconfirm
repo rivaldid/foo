@@ -1,0 +1,1 @@
+yaourt -Syu --devel --ignore xbmc-svn --noconfirm
