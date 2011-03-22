@@ -1,58 +1,58 @@
 <?php // Do not delete these lines
-	if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-		die ('Please do not load this page directly. Thanks!');
+    if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+        die ('Please do not load this page directly. Thanks!');
 
         if (!empty($post->post_password)) { // if there's a password
             if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
-				?>
-				
-				<p class="nocomments">This post is password protected. Enter the password to view comments.<p>
-				
-				<?php
-				return;
+                ?>
+
+                <p class="nocomments">This post is password protected. Enter the password to view comments.<p>
+
+                <?php
+                return;
             }
         }
 
-		/* This variable is for alternating comment background */
-		$oddcomment = 'alt';
+        /* This variable is for alternating comment background */
+        $oddcomment = 'alt';
 ?>
 
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-	<h3><?php comments_number('No Guestbook Entries', 'One Guestbook Entry', '% Guestbook Entries' );?> on &#8220;<?php the_title(); ?>&#8221;</h3> 
+    <h3><?php comments_number('No Guestbook Entries', 'One Guestbook Entry', '% Guestbook Entries' );?> on &#8220;<?php the_title(); ?>&#8221;</h3>
 
-		<div class="commentWrap">
-	<br />
-	<?php foreach (array_reverse($comments) as $comment) : ?>
+        <div class="commentWrap">
+    <br />
+    <?php foreach (array_reverse($comments) as $comment) : ?>
 
-		<div class="comment" id="comment-<?php comment_ID() ?>">
-			By <?php comment_author_link() ?>.
-			<small>
-			<?php comment_date('F jS, Y') ?> at <?php comment_time() ?> <?php edit_comment_link('edit','',''); ?>
-			</small>
-			<?php comment_text() ?>
-		</div>
+        <div class="comment" id="comment-<?php comment_ID() ?>">
+            By <?php comment_author_link() ?>.
+            <small>
+            <?php comment_date('F jS, Y') ?> at <?php comment_time() ?> <?php edit_comment_link('edit','',''); ?>
+            </small>
+            <?php comment_text() ?>
+        </div>
 
-	<?php /* Changes every other comment to a different class */	
-		if ('alt' == $oddcomment) $oddcomment = 'reg';
-		else $oddcomment = 'alt';
-	?>
+    <?php /* Changes every other comment to a different class */
+        if ('alt' == $oddcomment) $oddcomment = 'reg';
+        else $oddcomment = 'alt';
+    ?>
 
-	<?php endforeach; /* end for each comment */ ?>
+    <?php endforeach; /* end for each comment */ ?>
 
-	</div>
+    </div>
 
  <?php else : // this is displayed if there are no comments so far ?>
 
-  <?php if ('open' == $post->comment_status) : ?> 
-		<!-- If comments are open, but there are no comments. -->
-		
-	 <?php else : // comments are closed ?>
-		<!-- If comments are closed. -->
-		<p class="nocomments">Guestbook Entries are closed.</p>
-		
-	<?php endif; ?>
+  <?php if ('open' == $post->comment_status) : ?>
+        <!-- If comments are open, but there are no comments. -->
+
+     <?php else : // comments are closed ?>
+        <!-- If comments are closed. -->
+        <p class="nocomments">Guestbook Entries are closed.</p>
+
+    <?php endif; ?>
 <?php endif; ?>
 
 
