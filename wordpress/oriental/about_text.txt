@@ -1,0 +1,16 @@
+<p>
+I live in Molfetta BA, Italy.<br>
+I study computer science at Bari.<br>
+I have more friend and a beautiful girlfriend.<br>
+I like play football and fight to kick boxing.<br>
+I love my grandmother's lasagna.<br>
+</p>
+<p>
+ArchLinux User<br>
+Dario `dax` Vilardi<br>
+Public Key @ <a href="/dax.asc">www.deelab.org/dax.asc</a><br>
+7A94 51B8 9E37 8518 D71D  1C72 6272 6C18 27F1 81B0<br>
+</p>
+<p align="center">
+<img src="/pics/sticker-arch.png" alt="sticker-arch">
+</p>

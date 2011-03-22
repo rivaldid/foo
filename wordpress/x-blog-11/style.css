@@ -1,0 +1,324 @@
+/*  
+Theme Name: X Blog
+Theme URI: http://me.mywebsight.ws/web/wpthemes/
+Description: A Mac OS X style, 2 column theme. 
+Version: 1.1
+Author: R.J. Kaplan - MyWebsight
+Author URI: http://me.mywebsight.ws/
+*/
+
+/* Layout */
+
+html { background-image: url("http://www.deelab.org/imgs/background_bit_black.gif"); }
+a { outline-style: none; }
+
+body
+{
+	background: url("images/bg.png") repeat-y top center;
+	padding: 0;
+	margin: 0;
+}
+
+#container
+{
+	background-image: url("images/bg.png");
+	width: 770px;
+	margin: 0 auto;
+}
+
+#header
+{
+	background-image: url("images/header.jpg");
+	height: 230px;
+}
+
+#hcontents { padding-top: 60px; }
+
+#footer
+{
+	clear: both;
+	width: 770px;
+	background-image: url("images/footer.png");
+	height: 40px;
+}
+
+#fcontent
+{
+	text-align: center;
+	padding-top: 10px;
+}
+
+#content
+{
+	background-color: #fff;
+	width: 553px;
+	float: right;
+	margin-right: 26px !important;
+	margin-right: 13px;
+	padding: 20px 0 5px 0;
+}
+
+#content #inner { padding: 0px 35px 0px 35px; }
+.utext { text-align: right; }
+
+#sidebar
+{
+	float: left;
+	width: 148px;
+	padding-left: 26px;
+}
+
+/* Style */
+body
+{
+	font-family: "Lucida Grande", Verdana, Halvetica, sans-serif;
+	font-size: 12px;
+}
+
+#header .h1
+{
+	font-family: "Trebuchet MS", Verdana, Halvetica, sans-serif;
+	font-size: 52px;
+	color: #fff;
+	text-align: center;
+}
+
+#header .h2
+{
+	font-family: "Trebuchet MS", Verdana, Halvetica, sans-serif;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+}
+
+#content h2
+{
+	font-family: "Trebuchet MS", Verdana, Halvetica, sans-serif;
+	font-size: 18px;
+	color: #336699;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#content h2 a
+{
+	text-decoration: none;
+	color: #336699;
+}
+
+#content
+{
+	text-align: justify;
+	border-top: #999 1px solid;
+}
+
+#sidebar
+{
+	font-family: "Trebuchet MS", Verdana, Halvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+a
+{
+	color: #336699;
+	text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+img { border: 0; }
+
+.utext
+{
+	font-family: "Trebuchet MS", Verdana, Halvetica, sans-serif;
+	font-size: 10px;
+	color: #999;
+	line-height: 1px;
+}
+
+a.utext:link, a.utext:visited { color: #999; }
+a.utext:hover { color: #666; }
+
+#fcontent
+{
+	font-family: "Trebuchet MS", Verdana, Halvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+
+#fcontent  a { color: #666; }
+
+a#headerlink
+{
+	color: #efbc01;
+	text-decoration: none;
+}
+
+ul.buttons a
+{
+	display: block;
+	width: 148px;
+	height: 25px;
+	text-decoration: none;
+	background-image: url("images/button.png");
+	color: #000;
+	text-align: center;
+	margin: 5px 0;
+	line-height: 25px;
+	font-family: "lucida grande", "trebuchet", "arial", sans-serif;
+}
+
+ul.buttons a:active { background-image: url("images/button2.png"); }
+
+#sidelinks ul
+{
+	text-align: center;
+	margin: 0px;
+	padding: 0 0 0 0px;
+	list-style: none;
+}
+
+#sidelinks ul li
+{
+	margin: 0;
+	padding: 0;
+}
+
+#sidelinks h3
+{
+	margin: 15px 0 5px 0;
+	padding: 5px 0 5px 0;
+	border-top: #336699 1px solid;
+	border-bottom: #336699 1px solid;
+	color: #336699;
+}
+
+#sidelinks a { color: #333; }
+
+ul.buttons
+{
+	margin: 0px;
+	padding: 0;
+	list-style: none;
+}
+
+/* comments */
+#commentlist { margin-left: 100px; }
+
+.gravatar
+{
+	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	padding: 0px;
+}
+
+.gimage { border: 1px solid #000; }
+
+.postgrav
+{
+	float: right;
+	padding: 3px;
+	margin-right: 5px;
+	margin-left: 5px;
+	border: 1px solid #000;
+	background: #fff;
+}
+
+#commentlist .alt { background-color: #ececec; }
+
+.alignright
+{
+	width: 50%;
+	float: right;
+	font-size: 10px;
+	font-style: italic;
+	text-align: right;
+}
+
+.alignleft
+{
+	width: 50%;
+	float: left;
+	font-size: 10px;
+	font-style: italic;
+}
+
+.nofloatright
+{
+	text-align: right;
+	font-size: 10px;
+	font-style: italic;
+}
+
+.post { margin-bottom: 40px; }
+.postinfo { border-bottom: #6699cc 1px solid; }
+
+.postinfo small
+{
+	display: block;
+	float: right;
+	line-height: 25px;
+	margin-left: 10px;
+}
+
+.postmetadata
+{
+	border-top: #6699cc 1px solid;
+	padding-top: 3px;
+	font-size: 10px;
+	text-align: right;
+}
+
+.links ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.links ul li ul li { margin: 0 0 0 15px; }
+
+#content .links ul h2
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 10px;
+	border-top: #336699 1px solid;
+	border-bottom: #336699 1px solid;
+}
+
+.links ul a { font-weight: bold; }
+.commentWrap { margin-left: 100px; }
+
+.comment
+{
+	border-bottom: #6699cc 1px solid;
+	padding-top: 5px;
+}
+
+.replyForm { margin-left: 100px; }
+.navigation { padding: 3px 0 0 0; }
+
+.rightcol
+{
+	float: right;
+	width: 220px;
+}
+
+.leftcol
+{
+	float: left;
+	width: 220px;
+}
+
+.leftcol ul , .rightcol ul { list-style: none; }
+#searchform { margin: 0 0 10px 0; }
+
+input#s
+{
+	width: 145px;
+	color: #666;
+	text-indent: 5px;
+	border: 1px #ccc solid;
+}
