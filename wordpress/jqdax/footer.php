@@ -9,7 +9,7 @@
 </div>
 <?php endif; // endif widget ?>
 <p class="wp-bookmark"><a class="wp-logo" href="http://wordpress.org"><img src="<?php bloginfo('template_directory'); ?>/img/wordpress-logo.png" alt="WordPress"/></a></p>
-<div id="credits">deelab.org owned by <p><strong>Dario Vilardi</strong><br>2006 ~ 2011</p></div>
+<div id="credits">deelab dot org<p><strong>Dario Dax Vilardi</strong><br>2006 ~ 2011</p></div>
 </div>
 <div class="app_widget">
 <!-- sidebar_bottom_middle -->
