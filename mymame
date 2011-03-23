@@ -1,4 +1,0 @@
-killall xcompmgr 
-#sdlmame ~/.mame/roms/$1.zip -nowindow -noswitchres
-qmc2-sdlmame
-xcompmgr&
