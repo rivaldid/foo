@@ -1,2 +1,0 @@
-#!/bin/bash
-screen -t weechat-curses weechat-curses
