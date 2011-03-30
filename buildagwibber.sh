@@ -21,5 +21,7 @@ if [[ "$baz" == "0" ]]; then
 	echo "niente appòst, $pkg versione $foo."
 else {
 	echo "noi c'abbiamo $pkg versione $foo, mentre sul repo sta la versione $bar"
-	echo "vedi che mo ho messo il PKGBUILD di aur in $workspace/$pkg"
+	echo "mo ti faccio l'aggiornamento..."
+	cd "$workspace/$pkg"
+	makepkg -si
 } fi
